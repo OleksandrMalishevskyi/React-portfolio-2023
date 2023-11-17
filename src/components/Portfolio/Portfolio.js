@@ -1,77 +1,48 @@
-import React, { useEffect, useState } from "react";
-import Loader from "react-loaders";
-import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
-import "./portfolio.scss";
-// import { getDocs, collection } from 'firebase/firestore';
-// import { db } from '../../firebase';
+import React, { useEffect } from 'react'
 
-const Portfolio = () => { 
-    // const [letterClass, setLetterClass] = useState('text-animate');
-    // const [portfolio, setPortfolio] = useState([]);
+import './portfolio.scss'
+import TagCloud from "TagCloud";
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setLetterClass('text-animate-hover');
-    //     }, 3000);
+const Portfolio = () => {
 
-    //     return () => {
-    //         clearTimeout(timer);
-    //     }
-    // });
+  useEffect(() => {
+    return () => {
+      const container = '.tagcloud'
+      const texts = [
+        'HTML',
+        'CSS',
+        'SASS',
+        'JavaScript',
+        'React',
+        'Vue',
+        'Nuxt',
+        'NodeJS',
+  '<img src="../../assets/images/logo1.png" alt="Image 1">',
+  '<img src="../../assets/images/" alt="Image 2">',
+        'ES6',
+        'GIT',
+        'GITHUB',
+      ]
 
-    // useEffect(() => {
-    //     getPortfolio();
-    // }, []);
+      const options = {
+        radius: 300,
+        maxSpeed: 'normal',
+        initSpeed: 'normal',
+        keep: true,
+      }
 
-    // const getPortfolio = async () => {
-    //     const querySnapshot = await getDocs(collection(db, 'portfolio'));
-    //     setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
-    // }
-
-    const renderPortfolio = (portfolio) => {
-        return (
-            <div className="images-container">
-                {/* {
-                    portfolio.map((port, idx) => {
-                        return (
-                            <div className="image-box" key={idx}>
-                                <img 
-                                src={port.image}
-                                className="portfolio-image"
-                                alt="portfolio" />
-                                <div className="content">
-                                    <p className="title">{port.name}</p>
-                                    <h4 className="description">{port.description}</h4>
-                                    <button
-                                        className="btn"
-                                        onClick={() => window.open(port.url)}
-                                    >View</button>
-                                </div>
-                            </div>
-                        )
-                    })
-                } */}  
-            </div>
-        );
+      TagCloud(container, texts, options)
     }
+  }, [])
 
-
-    return (
-        <>
-            <div className="container portfolio-page">
-                {/* <h1 className="page-title">
-                    <AnimatedLetters
-                        letterClass={letterClass}
-                        strArray={"Portfolio".split("")}
-                        idx={15}
-                    />
-                </h1>
-                <div>{renderPortfolio(portfolio)}</div> */}
-<h1>Portfolio Page</h1>
-            </div>
-            <Loader type="pacman" />
-        </>
-    );
+  return (
+    <>
+      <div className="text-shpere">
+        {/* span tag className must be "tagcloud"  */}
+        <span className="tagcloud"></span>
+      </div>
+    </>
+  )
 }
 
-export default Portfolio;
+export default Portfolio
