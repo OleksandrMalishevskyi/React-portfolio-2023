@@ -2,9 +2,9 @@ import React from 'react'
 import allIcons from 'simple-icons'
 import { v4 } from 'uuid'
 import { IconCloud } from 'react-icon-cloud'
-import './portfolio.scss'
+import './skills.scss'
 
-const Sphere = () => {
+const Skills = () => {
   const tagCanvasOptions = {
     clickToFront: 500,
     depth: 1,
@@ -77,4 +77,4 @@ const Sphere = () => {
   );
 };
 
-export default Sphere;
+export default Skills;

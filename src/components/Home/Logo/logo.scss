@@ -1,3 +1,4 @@
+@import '../../../colors.scss';
 .logo-container {
   z-index: 0;
   width: 400px;
@@ -14,7 +15,7 @@
     width: 100%;
     height: auto;
     bottom: 0;
-    transform: rotateZ(180deg) !important;
+    transform: rotateZ(30deg) !important;
   }
 
   .solid-logo {
@@ -26,12 +27,13 @@
     margin: auto;
     width: 100%;
     opacity: 0;
-    transform: rotateZ(0deg) !important;
+    transform: rotateZ(30deg) !important;
     z-index: 1;
   }
 }
 
 .svg-container {
-  stroke: #1401c0;
-  stroke-width: 1;
+  stroke: var (--third);
+  stroke-width: 10;
 }
+

@@ -1,6 +1,8 @@
+@import '../../colors.scss';
+
 .nav-bar {
-  background: #ff0000;
-  width: 60px;
+  background: var(--fourth);
+  width: 75px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -14,11 +16,11 @@
     img {
       display: block;
       margin: 8px auto;
-      width: 50px;
+      width: 24px;
       height: auto;
 
       &.sub-logo {
-        width: 60px;
+        width: 50px;
       }
     }
   }
@@ -34,7 +36,7 @@
 
     a {
       font-size: 22px;
-      color: #4d4d4e;
+      color: var(--third);
       display: block;
       line-height: 51px;
       height: 51px;
@@ -46,7 +48,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: var(--third);
 
         svg {
           opacity: 0;
@@ -84,21 +86,35 @@
       }
     }
 
+    a.education-link {
+      &:after {
+        content: 'EDUCATION';
+      }
+    }
+
+    a.skills-link {
+      &:after {
+        content: 'SKILLS';
+      }
+    }
+
+    a.portfolio-link {
+      &:after {
+        content: 'WORKS';
+      }
+    }
+
     a.contact-link {
       &:after {
         content: 'CONTACT';
       }
     }
 
-    a.portfolio-link {
-      &:after {
-        content: 'PORTFOLIO';
-      }
-    }
+
 
     a.active {
       svg {
-        color: #ffd700;
+        color: var(--third);
       }
     }
   }
@@ -119,39 +135,41 @@
         display: block;
         font-size: 15px;
         line-height: 16px;
-        color: #4d4d4e;
+        color: var(--fifth);
       }
 
       &:hover {
         .anchor-icon {
-          color: #ffd700;
+          color: var(--third);
         }
       }
     }
   }
 }
 
-.hamburger-icon, .close-icon {
+.hamburger-icon,
+.close-icon {
   display: none;
 }
 
 
 @media screen and (max-width: 1200px) {
-  .nav-bar { 
+  .nav-bar {
     background: transparent;
     position: initial;
     height: auto;
     min-height: auto;
 
-     ul, nav {
+    ul,
+    nav {
       display: none;
-     }
+    }
 
-     nav {
+    nav {
       width: 100%;
       top: 0;
       left: 0;
-      background: #ff0000;
+      background: var(--fourth);
       height: 100%;
       margin: 0;
       z-index: 2;
@@ -177,14 +195,15 @@
       a svg {
         opacity: 1 !important;
       }
-     }
+    }
 
-     .hamburger-icon,
-     .close-icon {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        display: block;
-     }
+    .hamburger-icon,
+    .close-icon {
+      color: var(--third);
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+    }
   }
 }

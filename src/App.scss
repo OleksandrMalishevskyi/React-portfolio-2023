@@ -1,4 +1,6 @@
-$primary-color: #332c06;
+@import './colors.scss';
+
+$primary-color: var(--third);
 
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
@@ -61,7 +63,7 @@ textarea {
 }
 
 .tags {
-  color: #020200;
+  color: var(--third);
   opacity: 0.6;
   position: absolute;
   bottom: 0;
@@ -96,7 +98,7 @@ textarea {
     h1 {
       font-size: 53px;
       font-family: 'Coolvetica';
-      color: #ffd700;
+      color: var(--third);
       font-weight: 400;
       margin-top: 0;
       position: relative;
@@ -106,7 +108,7 @@ textarea {
       &:before {
         content: '<h1>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: var(--third);
         font-size: 18px;
         position: absolute;
         margin-top: -10px;
@@ -118,7 +120,7 @@ textarea {
       &:after {
         content: '<h1/>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: var(--third);
         font-size: 18px;
         line-height: 18px;
         position: absolute;
@@ -131,7 +133,7 @@ textarea {
 
     p {
       font-size: 13px;
-      color: #fff;
+      color: var(--sixth);
       font-family: sans-serif;
       font-weight: 300;
       max-width: fit-content;
@@ -160,7 +162,7 @@ textarea {
 
   .text-animate-hover {
     &:hover {
-      color: #fff;
+      color: var(--sixth);
     }
   }
 }

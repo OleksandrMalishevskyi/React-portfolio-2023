@@ -1,3 +1,4 @@
+@import '../../colors.scss';
 .text-animate {
   display: inline-block;
   opacity: 0;
@@ -15,12 +16,12 @@
 
   &:hover {
     animation: rubberBand 1s;
-    color: #ff0000;
+    color: var(--third);
   }
 }
 
 @for $i from 1 through 35 {
   .text-animate._#{$i} {
-    animation-delay: #{$i / 10}s;
+    animation-delay: calc($i / 10)s
   }
 }

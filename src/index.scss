@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 html {
   font-size: 62.5%;
 }
@@ -5,10 +7,10 @@ html {
 body {
   margin: 0;
   font: 300 11px/1.4 'Helvetica Neue', sans-serif;
-  color: #444;
+  color: var(--second);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #857e70;
+  background: var(--first);
   overflow: hidden;
   display: block;
 }
